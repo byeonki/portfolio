@@ -23,7 +23,7 @@ class BlogPostTemplate extends React.Component {
     )
     const plainTextBody = documentToPlainTextString(JSON.parse(post.body.raw))
     const { minutes: timeToRead } = readingTime(plainTextBody)
-    
+
     const options = {
       renderNode: {
         [BLOCKS.EMBEDDED_ASSET]: (node) => {
@@ -112,7 +112,15 @@ export const pageQuery = graphql`
       }
       body {
         raw
-        
+        references {
+           ... on ContentfulAsset {
+             contentful_id
+             title
+             description
+             gatsbyImage(width: 1000)
+             __typename
+           }
+         }
       }
       tags
       description {
