@@ -284,6 +284,27 @@
               }
             ]
           }
+        },
+        {
+          "id": "categories",
+          "name": "Categories",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+              {
+                "in": [
+                  "Commercial",
+                  "Artwork"
+                ]
+              }
+            ]
+          }
         }
       ]
     }
@@ -405,6 +426,10 @@
         {
           "fieldId": "tags",
           "widgetId": "tagEditor"
+        },
+        {
+          "fieldId": "categories",
+          "widgetId": "checkbox"
         }
       ],
       "sys": {
@@ -791,6 +816,9 @@
         },
         "tags": {
           "en-US": ["javascript"]
+        },
+        "checkbox": {
+          "en-US": ["Commercial"]
         }
       }
     },
@@ -1473,6 +1501,9 @@
         },
         "tags": {
           "en-US": ["general"]
+        },
+        "checkbox": {
+          "en-US": ["Commercial"]
         }
       }
     },
@@ -1897,6 +1928,9 @@
         },
         "tags": {
           "en-US": ["javascript", "static-sites"]
+        },
+        "checkbox": {
+          "en-US": ["Artwork"]
         }
       }
     }

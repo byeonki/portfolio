@@ -7,10 +7,11 @@
   --font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
     'Courier New', monospace;
   --font-serif: 'Times New Roman', Times, serif;
+  --font-pretendard: Pretendard;
 
   /* palette */
   --white: #fff;
-  --black: #000;
+  --black: #212529;
   --black-fade-5: rgba(0, 0, 0, 0.05);
 
   /* radii */
@@ -49,6 +50,7 @@
   --text-4xl: 48px;
   --text-5xl: 64px;
   --text-6xl: 76px;
+  --text-logo: 40px;
 
   /* tokens */
   /* colors */

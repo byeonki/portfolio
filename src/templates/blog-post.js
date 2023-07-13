@@ -123,6 +123,7 @@ export const pageQuery = graphql`
          }
       }
       tags
+      categories
       description {
         raw
       }

@@ -21,6 +21,7 @@
 
 .body {
   max-width: 48rem;
+  font-family: var(--font-pretendard);
 }
 
 .article a {
@@ -89,7 +90,7 @@
   .article ul {
     padding-left: 5px;
   }
-  
+
   .article ol {
     padding-left: 5px;
   }
