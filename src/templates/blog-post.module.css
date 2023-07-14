@@ -3,7 +3,7 @@
   font-size: var(--text-lg);
   font-style: italic;
   margin: 0 auto 1em;
-  max-width: var(--size-max-width);
+  /* max-width: var(--size-max-width); */
   padding-bottom: var(--size-gutter);
   padding-left: var(--size-gutter);
   position: relative;
@@ -16,12 +16,11 @@
   gap: var(--space-xl);
   letter-spacing: var(--text-prose-tracking);
   line-height: var(--loose);
-  padding: var(--size-gutter) var(--size-gutter) calc(var(--size-gutter) * 2);
 }
 
 .body {
-  max-width: 48rem;
-  font-family: var(--font-pretendard);
+  /* max-width: 48rem; */
+  font-family: var(--font-sans);
 }
 
 .article a {
@@ -69,7 +68,7 @@
 
 @media (min-width: 768px) {
   .container {
-    max-width: var(--size-max-width);
+    /* max-width: var(--size-max-width); */
     margin: 0 auto;
   }
 
@@ -81,7 +80,7 @@
 @media (min-width: 1024px) {
   .article {
     gap: var(--space-3xl);
-    margin: 0 var(--size-gutter) 0 auto;
+    margin: 0 var(--size-gutter);
     padding-left: 0;
     padding-right: 0;
     width: calc(85% - var(--size-gutter));

@@ -1,10 +1,10 @@
 .container {
   display: flex;
   justify-content: space-between;
-  max-width: var(--size-max-width);
+  /* max-width: var(--size-max-width); */
   align-items: center;
   margin: 0 auto;
-  padding: var(--space-2xl) var(--size-gutter);
+  padding: var(--space-lg) var(--size-gutter);
 }
 
 .navigation {
@@ -40,18 +40,4 @@
   flex-direction: row;
   flex-shrink: 0;
   letter-spacing: -0.8px;
-}
-
-@media (max-width: 767px) {
-  .logoLink > span:last-child {
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-  }
 }

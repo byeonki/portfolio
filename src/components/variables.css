@@ -7,7 +7,6 @@
   --font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
     'Courier New', monospace;
   --font-serif: 'Times New Roman', Times, serif;
-  --font-pretendard: Pretendard;
 
   /* palette */
   --white: #fff;
@@ -54,13 +53,14 @@
 
   /* tokens */
   /* colors */
-  --primary: #4a90e2;
+  --primary: #000000;
   --background: var(--white);
   --border: var(--black-fade-5);
 
   /* text */
   /* color */
   --text-color: var(--black);
+  --text-inactive-color: #868E96;
   /* size */
   --text-lead: var(--text-lg);
   --text-prose: var(--text-md);
@@ -76,7 +76,7 @@
 
 @media (min-width: 480px) {
   :root {
-    --size-gutter: var(--space-3xl);
+    --size-gutter: var(--space-2xl);
   }
 }
 

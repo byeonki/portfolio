@@ -2,7 +2,7 @@
   align-items: flex-end;
   display: flex;
   margin: 0 auto;
-  max-width: var(--size-max-width);
+  /* max-width: var(--size-max-width); */
   min-height: 200px;
   padding: 0 0 var(--size-gutter);
   position: relative;
@@ -23,7 +23,7 @@
   left: 0;
   max-width: 40rem;
   width: 85%;
-  padding: var(--space-2xl) var(--size-gutter) 0;
+  padding: 0 var(--size-gutter);
   position: absolute;
 }
 
@@ -48,18 +48,14 @@
 }
 
 @media (min-width: 768px) {
-  .hero {
-    padding-top: var(--size-gutter);
-  }
-
-  .details {
+  /* .details {
     max-width: 44rem;
     padding: var(--space-3xl) var(--size-gutter) 0;
-  }
+  } */
 }
 
 @media (min-width: 1024px) {
-  .image {
+  /* .image {
     margin-left: auto;
     width: 85%;
   }
@@ -67,5 +63,5 @@
   .details {
     left: var(--size-gutter);
     padding: var(--space-3xl) var(--size-gutter) 0 0;
-  }
+  } */
 }
