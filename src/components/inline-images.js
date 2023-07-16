@@ -1,6 +1,7 @@
 import React from 'react'
 
 import * as styles from './inline-images.module.css'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const InlineImages = ({ images }) => {
   if(!images?.length){
@@ -11,15 +12,9 @@ const InlineImages = ({ images }) => {
     <div className={styles.inlineImageContainer + " " + styles[`inlineImageContainerWith${images.length}`]}>
       {
         images.map((image, index)=>{
-          const {file, description} = image.fields
           return (
             <div className={styles.inlineImage} key={index}>
-              <img
-                width={file.details.image.width}
-                height={file.details.image.height}
-                src={`https:${file.url}`}
-                alt={description}
-              />
+              <GatsbyImage image={getImage(image?.gatsbyImage)} />
             </div>
           )
         })

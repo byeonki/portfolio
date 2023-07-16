@@ -5,6 +5,7 @@
 }
 
 .inlineImage{
+    flex:1;
     margin: calc(var(--space-2xl) / 2);
 }
 
