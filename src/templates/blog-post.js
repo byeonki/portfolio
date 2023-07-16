@@ -29,14 +29,12 @@ class BlogPostTemplate extends React.Component {
     },
   }
 
-    console.log(post)
-
     return (
       <Layout location={this.props.location}>
         <Seo
           title={post.title}
           description={plainTextDescription}
-          image={`http:${post.heroImage.resize.src}`}
+          image={post.heroImage.resize.src}
         />
         <Hero
           image={post.heroImage?.gatsbyImage}
@@ -90,7 +88,7 @@ export const pageQuery = graphql`
       rawDate: publishDate
       heroImage {
         gatsbyImage(layout: FULL_WIDTH, placeholder: BLURRED, width: 1280)
-        resize(height: 630, width: 1200) {
+        resize(width: 500) {
           src
         }
       }
