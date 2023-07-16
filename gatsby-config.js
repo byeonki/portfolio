@@ -4,8 +4,8 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Contentful Starter",
-    description: "Official Contentful Gatsby Starter",
+    title: "BYEONKI",
+    description: "BYEONKI",
   },
   plugins: [
     "gatsby-transformer-sharp",
@@ -19,6 +19,6 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
         host: process.env.CONTENTFUL_HOST
       },
-    },
-  ],
+    }
+  ]
 };

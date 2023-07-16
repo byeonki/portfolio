@@ -19,8 +19,8 @@ const BlogPost = (props) => {
 
   useEffect(()=>{
     const client = createClient({
-      space: process.env.CONTENTFUL_SPACE_ID,
-      accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      space: process.env.CONTENTFUL_GATSBY_SPACE_ID,
+      accessToken: process.env.CONTENTFUL_GATSBY_ACCESS_TOKEN,
     })
 
     client.getEntries({
