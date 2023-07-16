@@ -12,7 +12,7 @@
         "id": "blogPost",
         "type": "ContentType",
         "createdAt": "2023-07-12T08:11:17.404Z",
-        "updatedAt": "2023-07-13T14:34:52.926Z",
+        "updatedAt": "2023-07-16T09:38:01.833Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -20,8 +20,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 9,
-        "publishedAt": "2023-07-13T14:34:52.926Z",
+        "publishedVersion": 11,
+        "publishedAt": "2023-07-16T09:38:01.833Z",
         "firstPublishedAt": "2023-07-12T08:11:18.701Z",
         "createdBy": {
           "sys": {
@@ -37,8 +37,8 @@
             "id": "3YHg0kUlskBzk66xIg6DOP"
           }
         },
-        "publishedCounter": 5,
-        "version": 10,
+        "publishedCounter": 6,
+        "version": 12,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -405,6 +405,94 @@
           "linkType": "Asset"
         }
       ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "viga8uhafn70"
+          }
+        },
+        "id": "inlineImages",
+        "type": "ContentType",
+        "createdAt": "2023-07-16T07:50:52.812Z",
+        "updatedAt": "2023-07-16T07:50:53.303Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-07-16T07:50:53.303Z",
+        "firstPublishedAt": "2023-07-16T07:50:53.303Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3YHg0kUlskBzk66xIg6DOP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3YHg0kUlskBzk66xIg6DOP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3YHg0kUlskBzk66xIg6DOP"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Inline Images",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "images",
+          "name": "Images",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "size": {
+                "min": 1,
+                "max": 5
+              },
+              "message": "Between 1 and 5 images allowed"
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+            ],
+            "linkType": "Asset"
+          }
+        }
+      ]
     }
   ],
   "tags": [
@@ -421,7 +509,7 @@
             "linkType": "Space"
           }
         },
-        "version": 10,
+        "version": 12,
         "createdAt": "2023-07-12T08:11:18.861Z",
         "createdBy": {
           "sys": {
@@ -430,7 +518,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2023-07-13T14:34:53.991Z",
+        "updatedAt": "2023-07-16T09:38:02.764Z",
         "updatedBy": {
           "sys": {
             "id": "3YHg0kUlskBzk66xIg6DOP",
@@ -453,6 +541,44 @@
           }
         }
       },
+      "sidebar": [
+        {
+          "settings": {
+          },
+          "widgetId": "66frtrAqmWSowDJzQNDiD",
+          "widgetNamespace": "app"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "publication-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "content-preview-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "incoming-links-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "translation-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "versions-widget",
+          "widgetNamespace": "sidebar-builtin"
+        }
+      ],
       "controls": [
         {
           "fieldId": "title",
@@ -588,6 +714,62 @@
         {
           "fieldId": "image",
           "widgetId": "assetLinkEditor"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "viga8uhafn70",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-07-16T07:50:53.451Z",
+        "createdBy": {
+          "sys": {
+            "id": "3YHg0kUlskBzk66xIg6DOP",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-07-16T07:50:54.178Z",
+        "updatedBy": {
+          "sys": {
+            "id": "3YHg0kUlskBzk66xIg6DOP",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "inlineImages",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "images",
+          "widgetId": "assetGalleryEditor",
+          "widgetNamespace": "builtin"
         }
       ]
     }
@@ -729,7 +911,7 @@
         "id": "2PtC9h1YqIA6kaUaIsWEQ0",
         "type": "Entry",
         "createdAt": "2023-07-12T08:11:27.782Z",
-        "updatedAt": "2023-07-14T16:10:45.221Z",
+        "updatedAt": "2023-07-16T09:53:13.438Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -737,8 +919,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 30,
-        "publishedAt": "2023-07-14T16:10:45.221Z",
+        "publishedVersion": 62,
+        "publishedAt": "2023-07-16T09:53:13.438Z",
         "firstPublishedAt": "2023-07-12T08:11:30.892Z",
         "createdBy": {
           "sys": {
@@ -754,8 +936,8 @@
             "id": "3YHg0kUlskBzk66xIg6DOP"
           }
         },
-        "publishedCounter": 6,
-        "version": 31,
+        "publishedCounter": 17,
+        "version": 63,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -778,7 +960,7 @@
           "en-US": "Putons Character"
         },
         "slug": {
-          "en-US": "putons- character"
+          "en-US": "putons-character"
         },
         "heroImage": {
           "en-US": {
@@ -803,7 +985,7 @@
                     },
                     "marks": [
                     ],
-                    "value": "일본의 패션 테마파크 kisarazu concept store에 등장하는 다섯명의 메인 캐릭터를 \n제작했습니다. 각각 독특한 개성을 가진 캐릭터들의 귀여움을 놓치지 마세요.\n재밌게 봐주세요!\n\nI have created five characters that appear in the Kisarazu Concept Store in Japan.\nEach character is full of unique personalities, and don't miss their adorable \nmovements! Enjoy the artwork and have fun!",
+                    "value": "일본의 패션 테마파크 kisarazu concept store에 등장하는 다섯명의 메인 캐릭터를 \n제작했습니다. 각각 독특한 개성을 가진 캐릭터들의 귀여움을 놓치지 마세요.\n재밌게 봐주세요! \n\nI have created five characters that appear in the Kisarazu Concept Store in Japan.\nEach character is full of unique personalities, and don't miss their adorable \nmovements! Enjoy the artwork and have fun!",
                     "nodeType": "text"
                   }
                 ],
@@ -818,315 +1000,6 @@
             "data": {
             },
             "content": [
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                  "target": {
-                    "sys": {
-                      "id": "4ixjtUXCVgIgLPw275o24d",
-                      "type": "Link",
-                      "linkType": "Asset"
-                    }
-                  }
-                },
-                "content": [
-                ],
-                "nodeType": "embedded-asset-block"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                      "target": {
-                        "sys": {
-                          "id": "2PtC9h1YqIA6kaUaIsWEQ0",
-                          "type": "Link",
-                          "linkType": "Entry"
-                        }
-                      }
-                    },
-                    "content": [
-                    ],
-                    "nodeType": "embedded-entry-inline"
-                  },
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                      "target": {
-                        "sys": {
-                          "id": "2PtC9h1YqIA6kaUaIsWEQ0",
-                          "type": "Link",
-                          "linkType": "Entry"
-                        }
-                      }
-                    },
-                    "content": [
-                    ],
-                    "nodeType": "embedded-entry-inline"
-                  },
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                      "target": {
-                        "sys": {
-                          "id": "2PtC9h1YqIA6kaUaIsWEQ0",
-                          "type": "Link",
-                          "linkType": "Entry"
-                        }
-                      }
-                    },
-                    "content": [
-                    ],
-                    "nodeType": "embedded-entry-inline"
-                  },
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                      "target": {
-                        "sys": {
-                          "id": "2PtC9h1YqIA6kaUaIsWEQ0",
-                          "type": "Link",
-                          "linkType": "Entry"
-                        }
-                      }
-                    },
-                    "content": [
-                    ],
-                    "nodeType": "embedded-entry-inline"
-                  },
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                      "target": {
-                        "sys": {
-                          "id": "2PtC9h1YqIA6kaUaIsWEQ0",
-                          "type": "Link",
-                          "linkType": "Entry"
-                        }
-                      }
-                    },
-                    "content": [
-                    ],
-                    "nodeType": "embedded-entry-inline"
-                  },
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                      "target": {
-                        "sys": {
-                          "id": "2PtC9h1YqIA6kaUaIsWEQ0",
-                          "type": "Link",
-                          "linkType": "Entry"
-                        }
-                      }
-                    },
-                    "content": [
-                    ],
-                    "nodeType": "embedded-entry-inline"
-                  },
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                      "target": {
-                        "sys": {
-                          "id": "2PtC9h1YqIA6kaUaIsWEQ0",
-                          "type": "Link",
-                          "linkType": "Entry"
-                        }
-                      }
-                    },
-                    "content": [
-                    ],
-                    "nodeType": "embedded-entry-inline"
-                  },
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                      "target": {
-                        "sys": {
-                          "id": "2PtC9h1YqIA6kaUaIsWEQ0",
-                          "type": "Link",
-                          "linkType": "Entry"
-                        }
-                      }
-                    },
-                    "content": [
-                    ],
-                    "nodeType": "embedded-entry-inline"
-                  },
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                      "target": {
-                        "sys": {
-                          "id": "2PtC9h1YqIA6kaUaIsWEQ0",
-                          "type": "Link",
-                          "linkType": "Entry"
-                        }
-                      }
-                    },
-                    "content": [
-                    ],
-                    "nodeType": "embedded-entry-inline"
-                  },
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                      "target": {
-                        "sys": {
-                          "id": "2PtC9h1YqIA6kaUaIsWEQ0",
-                          "type": "Link",
-                          "linkType": "Entry"
-                        }
-                      }
-                    },
-                    "content": [
-                    ],
-                    "nodeType": "embedded-entry-inline"
-                  },
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
               {
                 "data": {
                 },
@@ -1889,7 +1762,7 @@
         "id": "31TNnjHlfaGUoMOwU0M2og",
         "type": "Entry",
         "createdAt": "2023-07-12T08:11:27.788Z",
-        "updatedAt": "2023-07-14T14:15:14.765Z",
+        "updatedAt": "2023-07-16T05:23:02.478Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1897,8 +1770,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2023-07-14T14:15:14.765Z",
+        "publishedVersion": 7,
+        "publishedAt": "2023-07-16T05:23:02.478Z",
         "firstPublishedAt": "2023-07-12T08:11:29.208Z",
         "createdBy": {
           "sys": {
@@ -1914,8 +1787,8 @@
             "id": "3YHg0kUlskBzk66xIg6DOP"
           }
         },
-        "publishedCounter": 3,
-        "version": 6,
+        "publishedCounter": 4,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2130,8 +2003,287 @@
         },
         "categories": {
           "en-US": [
-            "Artwork",
-            "Commercial"
+            "Artwork"
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "viga8uhafn70"
+          }
+        },
+        "id": "7BXtJvnjfhu1s8pNDEJmS5",
+        "type": "Entry",
+        "createdAt": "2023-07-16T07:51:12.842Z",
+        "updatedAt": "2023-07-16T07:51:51.258Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2023-07-16T07:51:51.258Z",
+        "firstPublishedAt": "2023-07-16T07:51:51.258Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3YHg0kUlskBzk66xIg6DOP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3YHg0kUlskBzk66xIg6DOP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3YHg0kUlskBzk66xIg6DOP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "inlineImages"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Putons Character 2 Images"
+        },
+        "images": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4ixjtUXCVgIgLPw275o24d"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4shwYI3POEGkw0Eg6kcyaQ"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "viga8uhafn70"
+          }
+        },
+        "id": "5Ip5u0oE9S1aucI6ONFrtd",
+        "type": "Entry",
+        "createdAt": "2023-07-16T08:58:05.006Z",
+        "updatedAt": "2023-07-16T08:58:32.794Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2023-07-16T08:58:32.794Z",
+        "firstPublishedAt": "2023-07-16T08:58:32.794Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3YHg0kUlskBzk66xIg6DOP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3YHg0kUlskBzk66xIg6DOP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3YHg0kUlskBzk66xIg6DOP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "inlineImages"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Putons Character 3 Images"
+        },
+        "images": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4ixjtUXCVgIgLPw275o24d"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4shwYI3POEGkw0Eg6kcyaQ"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4NzwDSDlGECGIiokKomsyI"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "viga8uhafn70"
+          }
+        },
+        "id": "2vTInN7di1iwXQGOpyDAVx",
+        "type": "Entry",
+        "createdAt": "2023-07-16T08:58:41.555Z",
+        "updatedAt": "2023-07-16T08:58:54.584Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2023-07-16T08:58:54.584Z",
+        "firstPublishedAt": "2023-07-16T08:58:54.584Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3YHg0kUlskBzk66xIg6DOP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3YHg0kUlskBzk66xIg6DOP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3YHg0kUlskBzk66xIg6DOP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "inlineImages"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Putons Character 5 Images"
+        },
+        "images": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4ixjtUXCVgIgLPw275o24d"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4shwYI3POEGkw0Eg6kcyaQ"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4NzwDSDlGECGIiokKomsyI"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6Od9v3wzLOysiMum0Wkmme"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7orLdboQQowIUs22KAW4U"
+              }
+            }
           ]
         }
       }

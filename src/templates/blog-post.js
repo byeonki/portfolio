@@ -3,10 +3,9 @@ import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer'
-import { BLOCKS } from '@contentful/rich-text-types'
+import { BLOCKS, INLINES } from '@contentful/rich-text-types'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import readingTime from 'reading-time'
-
+import InlineImages from '../components/inline-images'
 import Seo from '../components/seo'
 import Layout from '../components/layout'
 import Hero from '../components/hero'
@@ -22,21 +21,34 @@ class BlogPostTemplate extends React.Component {
       JSON.parse(post.description.raw)
     )
     const plainTextBody = documentToPlainTextString(JSON.parse(post.body.raw))
-    const { minutes: timeToRead } = readingTime(plainTextBody)
 
     const options = {
       renderNode: {
         [BLOCKS.EMBEDDED_ASSET]: (node) => {
-        const { gatsbyImage, description } = node.data.target
-        return (
-           <GatsbyImage
-              image={getImage(gatsbyImage)}
-              alt={description}
-           />
-         )
+          console.log("BLOCKS.EMBEDDED_ASSET",node)
+
+          const { gatsbyImage, description } = node.data.target
+          return (
+            <GatsbyImage
+                image={getImage(gatsbyImage)}
+                alt={description}
+            />
+          )
         },
+        [BLOCKS.EMBEDDED_ENTRY]: (node, children) => {
+          console.log("BLOCKS.EMBEDDED_ENTRY",node)
+          const images = node?.data?.target?.fields?.images?.["en-US"]
+          console.log("iamges", images)
+          return <InlineImages images={images} />
+        },
+        [INLINES.EMBEDDED_ENTRY]: (node, children) => {
+          console.log("INLINES.EMBEDDED_ENTRY",node, children)
+          return null
+        }
       },
     };
+
+    console.log(post.body?.raw)
 
     return (
       <Layout location={this.props.location}>
@@ -114,8 +126,14 @@ export const pageQuery = graphql`
              description
              gatsbyImage(width: 1000)
              __typename
-           }
-         }
+          }
+          ... on ContentfulBlogPost {
+            contentful_id
+            __typename
+            title
+            slug
+          }
+        }
       }
       tags
       categories

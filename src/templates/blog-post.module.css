@@ -83,7 +83,7 @@
     margin: 0 var(--size-gutter);
     padding-left: 0;
     padding-right: 0;
-    width: calc(85% - var(--size-gutter));
+    /* width: calc(85% - var(--size-gutter)); */
   }
 
   .article ul {

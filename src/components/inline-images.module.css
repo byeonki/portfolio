@@ -1,0 +1,9 @@
+.inlineImageContainer{
+    display: flex;
+    flex-direction: row;
+    margin: calc(-1 * var(--space-2xl) / 2);
+}
+
+.inlineImage{
+    margin: calc(var(--space-2xl) / 2);
+}
