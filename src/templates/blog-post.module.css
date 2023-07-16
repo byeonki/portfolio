@@ -3,7 +3,6 @@
   font-size: var(--text-lg);
   font-style: italic;
   margin: 0 auto 1em;
-  /* max-width: var(--size-max-width); */
   padding-bottom: var(--size-gutter);
   padding-left: var(--size-gutter);
   position: relative;
@@ -11,31 +10,19 @@
 }
 
 .article {
-  display: grid;
-  font-size: var(--text-prose);
-  gap: var(--space-xl);
-  letter-spacing: var(--text-prose-tracking);
-  line-height: var(--loose);
+  font-size: var(--text-xl);
+  font-weight: var(--medium);
+  letter-spacing: -0.4px;
+  margin: 0 var(--space-2xl)
 }
 
 .body {
-  /* max-width: 48rem; */
   font-family: var(--font-sans);
-}
-
-.article a {
-  border-bottom: 1.5px solid currentColor;
-  font-weight: var(--medium);
 }
 
 .article a:hover {
   border-bottom-color: transparent;
   color: var(--primary);
-}
-
-.article p {
-  margin-bottom: 1.5em;
-  margin-top: 0;
 }
 
 .article h1,
@@ -63,34 +50,20 @@
   flex-wrap: wrap;
   justify-content: space-between;
   list-style: none;
+  margin: 28px 0 16px;
   padding: 0;
 }
 
-@media (min-width: 768px) {
-  .container {
-    /* max-width: var(--size-max-width); */
-    margin: 0 auto;
-  }
-
-  .article {
-    gap: var(--space-xl);
-  }
+.articleNavigation li {
+  font-size: var(--text-2xl);
+  font-weight: var(--medium);
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 809px) {
   .article {
-    gap: var(--space-3xl);
-    margin: 0 var(--size-gutter);
-    padding-left: 0;
-    padding-right: 0;
-    /* width: calc(85% - var(--size-gutter)); */
+    font-size: var(--text-sm);
   }
-
-  .article ul {
-    padding-left: 5px;
-  }
-
-  .article ol {
-    padding-left: 5px;
+  .article p{
+    margin: 0;
   }
 }

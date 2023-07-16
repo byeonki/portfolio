@@ -39,6 +39,11 @@ body {
 img {
   display: block;
   width: 100%;
+  height: auto;
+}
+
+P {
+  white-space: pre-wrap;
 }
 
 h1,

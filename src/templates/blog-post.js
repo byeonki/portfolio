@@ -1,153 +1,94 @@
-import React from 'react'
-import { Link, graphql } from 'gatsby'
-import get from 'lodash/get'
-import { renderRichText } from 'gatsby-source-contentful/rich-text'
+import React, {useEffect, useState} from 'react'
+import { Link } from 'gatsby'
 import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer'
-import { BLOCKS, INLINES } from '@contentful/rich-text-types'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { BLOCKS } from '@contentful/rich-text-types'
 import InlineImages from '../components/inline-images'
 import Seo from '../components/seo'
 import Layout from '../components/layout'
 import Hero from '../components/hero'
-import Tags from '../components/tags'
 import * as styles from './blog-post.module.css'
+import { createClient } from "contentful"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
-class BlogPostTemplate extends React.Component {
-  render() {
-    const post = get(this.props, 'data.contentfulBlogPost')
-    const previous = get(this.props, 'data.previous')
-    const next = get(this.props, 'data.next')
-    const plainTextDescription = documentToPlainTextString(
-      JSON.parse(post.description.raw)
-    )
-    const plainTextBody = documentToPlainTextString(JSON.parse(post.body.raw))
+const BlogPost = (props) => {
+  console.log(props)
+  const [post, setPost] = useState()
+  const {slug} = props.pageContext
+  const next = props.pageContext.next
+  const previous = props.pageContext.previous
 
-    const options = {
-      renderNode: {
-        [BLOCKS.EMBEDDED_ASSET]: (node) => {
-          console.log("BLOCKS.EMBEDDED_ASSET",node)
+  useEffect(()=>{
+    const client = createClient({
+      space: process.env.CONTENTFUL_SPACE_ID,
+      accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+    })
 
-          const { gatsbyImage, description } = node.data.target
-          return (
-            <GatsbyImage
-                image={getImage(gatsbyImage)}
-                alt={description}
-            />
-          )
-        },
-        [BLOCKS.EMBEDDED_ENTRY]: (node, children) => {
-          console.log("BLOCKS.EMBEDDED_ENTRY",node)
-          const images = node?.data?.target?.fields?.images?.["en-US"]
-          console.log("iamges", images)
-          return <InlineImages images={images} />
-        },
-        [INLINES.EMBEDDED_ENTRY]: (node, children) => {
-          console.log("INLINES.EMBEDDED_ENTRY",node, children)
-          return null
-        }
+    client.getEntries({
+        content_type: "blogPost",
+        limit: 1,
+        include: 10,
+        "fields.slug": slug,
+      })
+      .then((entry) => {
+        console.log("entty", entry)
+        setPost(entry?.items?.[0].fields)
+      })
+      .catch(console.error)
+  }, [slug])
+
+  const options = {
+    renderNode: {
+      [BLOCKS.EMBEDDED_ENTRY]: (node, children) => {
+        const images = node?.data?.target?.fields?.images
+        return images ? <InlineImages images={images} /> : null
       },
-    };
-
-    console.log(post.body?.raw)
-
-    return (
-      <Layout location={this.props.location}>
-        <Seo
-          title={post.title}
-          description={plainTextDescription}
-          image={`http:${post.heroImage.resize.src}`}
-        />
-        <Hero
-          image={post.heroImage?.gatsbyImage}
-          title={post.title}
-          content={post.description}
-        />
-        <div className={styles.container}>
-          <div className={styles.article}>
-            <div className={styles.body}>
-              {post.body?.raw && renderRichText(post.body, options)}
-            </div>
-            <Tags tags={post.tags} />
-            {(previous || next) && (
-              <nav>
-                <ul className={styles.articleNavigation}>
-                  {previous && (
-                    <li>
-                      <Link to={`/blog/${previous.slug}`} rel="prev">
-                        ← {previous.title}
-                      </Link>
-                    </li>
-                  )}
-                  {next && (
-                    <li>
-                      <Link to={`/blog/${next.slug}`} rel="next">
-                        {next.title} →
-                      </Link>
-                    </li>
-                  )}
-                </ul>
-              </nav>
-            )}
-          </div>
-        </div>
-      </Layout>
-    )
+    },
   }
+
+  if(!post){
+    return null
+  }
+
+  console.log(post)
+  return (
+    <Layout location={props.location}>
+      <Seo
+        title={post.title}
+        description={documentToPlainTextString(post.description)}
+        image={`http:${post.heroImage.fields.file.url}`}
+      />
+      <Hero
+        image={post.heroImage?.gatsbyImage}
+        title={post.title}
+        content={post.description}
+      />
+      <div className={styles.article}>
+        <div className={styles.body}>
+          {post.body && documentToReactComponents(post.body, options)}
+        </div>
+        {(previous || next) && (
+          <nav>
+            <ul className={styles.articleNavigation}>
+              {previous && (
+                <li>
+                  <Link to={`/blog/${previous.slug}`} rel="prev">
+                    ← {previous.title}
+                  </Link>
+                </li>
+              )}
+              {next && (
+                <li>
+                  <Link to={`/blog/${next.slug}`} rel="next">
+                    {next.title} →
+                  </Link>
+                </li>
+              )}
+            </ul>
+          </nav>
+        )}
+      </div>
+    </Layout>
+  )
 }
 
-export default BlogPostTemplate
-
-export const pageQuery = graphql`
-  query BlogPostBySlug(
-    $slug: String!
-    $previousPostSlug: String
-    $nextPostSlug: String
-  ) {
-    contentfulBlogPost(slug: { eq: $slug }) {
-      slug
-      title
-      author {
-        name
-      }
-      publishDate(formatString: "MMMM Do, YYYY")
-      rawDate: publishDate
-      heroImage {
-        gatsbyImage(layout: FULL_WIDTH, placeholder: BLURRED, width: 1280)
-        resize(height: 630, width: 1200) {
-          src
-        }
-      }
-      body {
-        raw
-        references {
-           ... on ContentfulAsset {
-             contentful_id
-             title
-             description
-             gatsbyImage(width: 1000)
-             __typename
-          }
-          ... on ContentfulBlogPost {
-            contentful_id
-            __typename
-            title
-            slug
-          }
-        }
-      }
-      tags
-      categories
-      description {
-        raw
-      }
-    }
-    previous: contentfulBlogPost(slug: { eq: $previousPostSlug }) {
-      slug
-      title
-    }
-    next: contentfulBlogPost(slug: { eq: $nextPostSlug }) {
-      slug
-      title
-    }
-  }
-`
+export default BlogPost

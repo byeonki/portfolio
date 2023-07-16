@@ -1,18 +1,5 @@
 const path = require('path')
-const deepMap = require("deep-map");
-const normalize = require("gatsby-source-contentful/normalize");
 
-// Contentful: This fixed the max call
-// normalize.fixIds = (object) => {
-//   const out = deepMap(object, (v, k) => (k === "id" ? normalize.fixId(v) : v));
-//   return {
-//     ...out,
-//     sys: {
-//       ...out.sys,
-//       contentful_id: object.sys.id,
-//     },
-//   };
-// };
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
@@ -48,17 +35,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   if (posts.length > 0) {
     posts.forEach((post, index) => {
-      const previousPostSlug = index === 0 ? null : posts[index - 1].slug
-      const nextPostSlug =
-        index === posts.length - 1 ? null : posts[index + 1].slug
+      const previousPost = index === 0 ? null : posts[index - 1]
+      const nextPost =
+        index === posts.length - 1 ? null : posts[index + 1]
 
       createPage({
         path: `/blog/${post.slug}/`,
         component: blogPost,
         context: {
           slug: post.slug,
-          previousPostSlug,
-          nextPostSlug,
+          next: nextPost,
+          previous: previousPost,
         },
       })
     })

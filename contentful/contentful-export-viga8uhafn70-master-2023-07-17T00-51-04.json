@@ -12,7 +12,7 @@
         "id": "blogPost",
         "type": "ContentType",
         "createdAt": "2023-07-12T08:11:17.404Z",
-        "updatedAt": "2023-07-16T09:38:01.833Z",
+        "updatedAt": "2023-07-16T15:31:39.979Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -20,8 +20,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 11,
-        "publishedAt": "2023-07-16T09:38:01.833Z",
+        "publishedVersion": 23,
+        "publishedAt": "2023-07-16T15:31:39.979Z",
         "firstPublishedAt": "2023-07-12T08:11:18.701Z",
         "createdBy": {
           "sys": {
@@ -37,8 +37,8 @@
             "id": "3YHg0kUlskBzk66xIg6DOP"
           }
         },
-        "publishedCounter": 6,
-        "version": 12,
+        "publishedCounter": 12,
+        "version": 24,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -168,23 +168,6 @@
           "omitted": false
         },
         {
-          "id": "author",
-          "name": "Author",
-          "type": "Link",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "linkContentType": [
-                "person"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false,
-          "linkType": "Entry"
-        },
-        {
           "id": "publishDate",
           "name": "Publish Date",
           "type": "Date",
@@ -194,29 +177,6 @@
           ],
           "disabled": false,
           "omitted": false
-        },
-        {
-          "id": "tags",
-          "name": "Tags",
-          "type": "Array",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false,
-          "items": {
-            "type": "Symbol",
-            "validations": [
-              {
-                "in": [
-                  "general",
-                  "javascript",
-                  "static-sites"
-                ]
-              }
-            ]
-          }
         },
         {
           "id": "categories",
@@ -254,7 +214,7 @@
         "id": "person",
         "type": "ContentType",
         "createdAt": "2023-07-12T08:11:17.408Z",
-        "updatedAt": "2023-07-12T08:11:17.989Z",
+        "updatedAt": "2023-07-16T15:31:51.275Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -262,8 +222,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2023-07-12T08:11:17.989Z",
+        "publishedVersion": 7,
+        "publishedAt": "2023-07-16T15:31:51.275Z",
         "firstPublishedAt": "2023-07-12T08:11:17.989Z",
         "createdBy": {
           "sys": {
@@ -279,8 +239,8 @@
             "id": "3YHg0kUlskBzk66xIg6DOP"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 4,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -333,6 +293,36 @@
           "localized": false,
           "required": true,
           "validations": [
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
+            },
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code"
+              ],
+              "message": "Only bold, italic, underline, and code marks are allowed"
+            }
           ],
           "disabled": false,
           "omitted": false
@@ -340,50 +330,6 @@
         {
           "id": "email",
           "name": "Email",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "phone",
-          "name": "Phone",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "facebook",
-          "name": "Facebook",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "twitter",
-          "name": "Twitter",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "github",
-          "name": "Github",
           "type": "Symbol",
           "localized": false,
           "required": false,
@@ -418,7 +364,7 @@
         "id": "inlineImages",
         "type": "ContentType",
         "createdAt": "2023-07-16T07:50:52.812Z",
-        "updatedAt": "2023-07-16T07:50:53.303Z",
+        "updatedAt": "2023-07-16T15:31:28.435Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -426,8 +372,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2023-07-16T07:50:53.303Z",
+        "publishedVersion": 3,
+        "publishedAt": "2023-07-16T15:31:28.435Z",
         "firstPublishedAt": "2023-07-16T07:50:53.303Z",
         "createdBy": {
           "sys": {
@@ -443,8 +389,8 @@
             "id": "3YHg0kUlskBzk66xIg6DOP"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 4,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -509,7 +455,7 @@
             "linkType": "Space"
           }
         },
-        "version": 12,
+        "version": 24,
         "createdAt": "2023-07-12T08:11:18.861Z",
         "createdBy": {
           "sys": {
@@ -518,7 +464,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2023-07-16T09:38:02.764Z",
+        "updatedAt": "2023-07-16T15:31:41.206Z",
         "updatedBy": {
           "sys": {
             "id": "3YHg0kUlskBzk66xIg6DOP",
@@ -545,19 +491,7 @@
         {
           "settings": {
           },
-          "widgetId": "66frtrAqmWSowDJzQNDiD",
-          "widgetNamespace": "app"
-        },
-        {
-          "settings": {
-          },
           "widgetId": "publication-widget",
-          "widgetNamespace": "sidebar-builtin"
-        },
-        {
-          "settings": {
-          },
-          "widgetId": "content-preview-widget",
           "widgetNamespace": "sidebar-builtin"
         },
         {
@@ -576,6 +510,11 @@
           "settings": {
           },
           "widgetId": "versions-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "disabled": true,
+          "widgetId": "content-preview-widget",
           "widgetNamespace": "sidebar-builtin"
         }
       ],
@@ -606,22 +545,12 @@
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "author",
-          "widgetId": "entryLinkEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
           "fieldId": "publishDate",
           "settings": {
             "ampm": "24",
             "format": "timeZ"
           },
           "widgetId": "datePicker",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "tags",
-          "widgetId": "tagEditor",
           "widgetNamespace": "builtin"
         },
         {
@@ -642,7 +571,7 @@
             "linkType": "Space"
           }
         },
-        "version": 2,
+        "version": 8,
         "createdAt": "2023-07-12T08:11:18.232Z",
         "createdBy": {
           "sys": {
@@ -651,7 +580,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2023-07-12T08:11:19.630Z",
+        "updatedAt": "2023-07-16T15:31:52.206Z",
         "updatedBy": {
           "sys": {
             "id": "3YHg0kUlskBzk66xIg6DOP",
@@ -674,46 +603,67 @@
           }
         }
       },
+      "sidebar": [
+        {
+          "settings": {
+          },
+          "widgetId": "publication-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "incoming-links-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "translation-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "versions-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "disabled": true,
+          "widgetId": "content-preview-widget",
+          "widgetNamespace": "sidebar-builtin"
+        }
+      ],
       "controls": [
         {
           "fieldId": "name",
-          "widgetId": "singleLine"
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
         },
         {
           "fieldId": "title",
-          "widgetId": "singleLine"
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
         },
         {
           "fieldId": "company",
-          "widgetId": "singleLine"
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
         },
         {
           "fieldId": "shortBio",
-          "widgetId": "richTextEditor"
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
         },
         {
           "fieldId": "email",
-          "widgetId": "singleLine"
-        },
-        {
-          "fieldId": "phone",
-          "widgetId": "singleLine"
-        },
-        {
-          "fieldId": "facebook",
-          "widgetId": "singleLine"
-        },
-        {
-          "fieldId": "twitter",
-          "widgetId": "singleLine"
-        },
-        {
-          "fieldId": "github",
-          "widgetId": "singleLine"
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
         },
         {
           "fieldId": "image",
-          "widgetId": "assetLinkEditor"
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
         }
       ]
     },
@@ -728,7 +678,7 @@
             "linkType": "Space"
           }
         },
-        "version": 2,
+        "version": 4,
         "createdAt": "2023-07-16T07:50:53.451Z",
         "createdBy": {
           "sys": {
@@ -737,7 +687,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2023-07-16T07:50:54.178Z",
+        "updatedAt": "2023-07-16T15:31:29.294Z",
         "updatedBy": {
           "sys": {
             "id": "3YHg0kUlskBzk66xIg6DOP",
@@ -760,6 +710,37 @@
           }
         }
       },
+      "sidebar": [
+        {
+          "settings": {
+          },
+          "widgetId": "publication-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "incoming-links-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "translation-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "versions-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "disabled": true,
+          "widgetId": "content-preview-widget",
+          "widgetNamespace": "sidebar-builtin"
+        }
+      ],
       "controls": [
         {
           "fieldId": "title",
@@ -788,130 +769,10 @@
             "id": "viga8uhafn70"
           }
         },
-        "id": "15jwOBqpxqSAOy2eOO4S0m",
-        "type": "Entry",
-        "createdAt": "2023-07-12T08:11:27.780Z",
-        "updatedAt": "2023-07-12T08:11:28.570Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 1,
-        "publishedAt": "2023-07-12T08:11:28.570Z",
-        "firstPublishedAt": "2023-07-12T08:11:28.570Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "3YHg0kUlskBzk66xIg6DOP"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "3YHg0kUlskBzk66xIg6DOP"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 2,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "3YHg0kUlskBzk66xIg6DOP"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "person"
-          }
-        }
-      },
-      "fields": {
-        "name": {
-          "en-US": "John Doe"
-        },
-        "title": {
-          "en-US": "Web Developer"
-        },
-        "company": {
-          "en-US": "ACME"
-        },
-        "shortBio": {
-          "en-US": {
-            "nodeType": "document",
-            "data": {
-            },
-            "content": [
-              {
-                "nodeType": "paragraph",
-                "data": {
-                },
-                "content": [
-                  {
-                    "nodeType": "text",
-                    "value": "Research and recommendations for modern stack websites.",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        "email": {
-          "en-US": "john@doe.com"
-        },
-        "phone": {
-          "en-US": "0176 / 1234567"
-        },
-        "facebook": {
-          "en-US": "johndoe"
-        },
-        "twitter": {
-          "en-US": "johndoe"
-        },
-        "github": {
-          "en-US": "johndoe"
-        },
-        "image": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Asset",
-              "id": "7orLdboQQowIUs22KAW4U"
-            }
-          }
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "viga8uhafn70"
-          }
-        },
         "id": "2PtC9h1YqIA6kaUaIsWEQ0",
         "type": "Entry",
         "createdAt": "2023-07-12T08:11:27.782Z",
-        "updatedAt": "2023-07-16T09:53:13.438Z",
+        "updatedAt": "2023-07-16T15:45:02.873Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -919,8 +780,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 62,
-        "publishedAt": "2023-07-16T09:53:13.438Z",
+        "publishedVersion": 126,
+        "publishedAt": "2023-07-16T15:45:02.873Z",
         "firstPublishedAt": "2023-07-12T08:11:30.892Z",
         "createdBy": {
           "sys": {
@@ -936,8 +797,8 @@
             "id": "3YHg0kUlskBzk66xIg6DOP"
           }
         },
-        "publishedCounter": 17,
-        "version": 63,
+        "publishedCounter": 31,
+        "version": 127,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -985,7 +846,38 @@
                     },
                     "marks": [
                     ],
-                    "value": "일본의 패션 테마파크 kisarazu concept store에 등장하는 다섯명의 메인 캐릭터를 \n제작했습니다. 각각 독특한 개성을 가진 캐릭터들의 귀여움을 놓치지 마세요.\n재밌게 봐주세요! \n\nI have created five characters that appear in the Kisarazu Concept Store in Japan.\nEach character is full of unique personalities, and don't miss their adorable \nmovements! Enjoy the artwork and have fun!",
+                    "value": "일본의 패션 테마파크 kisarazu concept store에 등장하는 다섯명의 메인 캐릭",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "터를\n",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "제작했습니다. 각각 독특한 개성을 가진 캐릭터들의 귀여움을 놓치지 마세요.\n재밌게 봐주세요!",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "I have created five characters that appear in the Kisarazu Concept Store in Japan.\nEach character is full of unique personalities, and don't miss their adorable \nmovements! Enjoy the artwork and have fun!",
                     "nodeType": "text"
                   }
                 ],
@@ -1000,6 +892,108 @@
             "data": {
             },
             "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "7BXtJvnjfhu1s8pNDEJmS5",
+                      "type": "Link",
+                      "linkType": "Entry"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-entry-block"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "5Ip5u0oE9S1aucI6ONFrtd",
+                      "type": "Link",
+                      "linkType": "Entry"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-entry-block"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "2vTInN7di1iwXQGOpyDAVx",
+                      "type": "Link",
+                      "linkType": "Entry"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-entry-block"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
               {
                 "data": {
                 },
@@ -1019,991 +1013,12 @@
             "nodeType": "document"
           }
         },
-        "author": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "15jwOBqpxqSAOy2eOO4S0m"
-            }
-          }
-        },
         "publishDate": {
           "en-US": "2017-05-16T00:00+02:00"
         },
-        "tags": {
-          "en-US": [
-            "javascript",
-            "static-sites"
-          ]
-        },
         "categories": {
           "en-US": [
             "Commercial"
-          ]
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "viga8uhafn70"
-          }
-        },
-        "id": "3K9b0esdy0q0yGqgW2g6Ke",
-        "type": "Entry",
-        "createdAt": "2023-07-12T08:11:27.786Z",
-        "updatedAt": "2023-07-13T14:35:31.899Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 3,
-        "publishedAt": "2023-07-13T14:35:31.899Z",
-        "firstPublishedAt": "2023-07-12T08:11:29.785Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "3YHg0kUlskBzk66xIg6DOP"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "3YHg0kUlskBzk66xIg6DOP"
-          }
-        },
-        "publishedCounter": 2,
-        "version": 4,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "3YHg0kUlskBzk66xIg6DOP"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "blogPost"
-          }
-        }
-      },
-      "fields": {
-        "title": {
-          "en-US": "Hello world"
-        },
-        "slug": {
-          "en-US": "hello-world"
-        },
-        "heroImage": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Asset",
-              "id": "6Od9v3wzLOysiMum0Wkmme"
-            }
-          }
-        },
-        "description": {
-          "en-US": {
-            "data": {
-            },
-            "content": [
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Your very first content with Contentful, pulled in JSON format using the Content Delivery API.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              }
-            ],
-            "nodeType": "document"
-          }
-        },
-        "body": {
-          "en-US": {
-            "data": {
-            },
-            "content": [
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "These is your very first content with Contentful, pulled in JSON format using the ",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                      "uri": "https://www.contentful.com/developers/docs/references/content-delivery-api/"
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "marks": [
-                        ],
-                        "value": "Content Delivery API",
-                        "nodeType": "text"
-                      }
-                    ],
-                    "nodeType": "hyperlink"
-                  },
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": ". Content and presentation are now decoupled, allowing you to focus your efforts in building the perfect app.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Your first steps",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "heading-2"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Building with Contentful is easy. First take a moment to get ",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                      "uri": "https://www.contentful.com/r/knowledgebase/content-modelling-basics"
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "marks": [
-                        ],
-                        "value": "the basics of content modelling",
-                        "nodeType": "text"
-                      }
-                    ],
-                    "nodeType": "hyperlink"
-                  },
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": ", which you can set up in the ",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                      "uri": "https://app.contentful.com/"
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "marks": [
-                        ],
-                        "value": "Contentful Web app",
-                        "nodeType": "text"
-                      }
-                    ],
-                    "nodeType": "hyperlink"
-                  },
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": ". Once you get that, feel free to drop by the ",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                      "uri": "https://www.contentful.com/developers/docs/"
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "marks": [
-                        ],
-                        "value": "Documentation",
-                        "nodeType": "text"
-                      }
-                    ],
-                    "nodeType": "hyperlink"
-                  },
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": " to learn a bit more about how to build your app with Contentful, in particular the ",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                      "uri": "https://www.contentful.com/developers/docs/concepts/apis/"
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "marks": [
-                        ],
-                        "value": "API basics",
-                        "nodeType": "text"
-                      }
-                    ],
-                    "nodeType": "hyperlink"
-                  },
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": " and each one of our four APIs, as shown below.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Content Delivery API",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "heading-3"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "The ",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                      "uri": "https://www.contentful.com/developers/docs/references/content-delivery-api/"
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "marks": [
-                        ],
-                        "value": "Content Delivery API",
-                        "nodeType": "text"
-                      }
-                    ],
-                    "nodeType": "hyperlink"
-                  },
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": " (CDA), available at ",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                      {
-                        "type": "code"
-                      }
-                    ],
-                    "value": "cdn.contentful.com",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": ", is a read-only API for delivering content from Contentful to apps, websites and other media. Content is delivered as JSON data, and images, videos and other media as files.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "The API is available via a globally distributed content delivery network. The server closest to the user serves all content, both JSON and binary. This minimizes latency, which especially benefits mobile apps. Hosting content in multiple global data centers also greatly improves the availability of content.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Content Management API",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "heading-3"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "The ",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                      "uri": "https://www.contentful.com/developers/docs/references/content-management-api/"
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "marks": [
-                        ],
-                        "value": "Content Management API",
-                        "nodeType": "text"
-                      }
-                    ],
-                    "nodeType": "hyperlink"
-                  },
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": " (CMA), available at ",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                      {
-                        "type": "code"
-                      }
-                    ],
-                    "value": "api.contentful.com",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": ", is a read-write API for managing content. Unlike the Content Delivery API, the management API requires you to authenticate as a Contentful user. You could use the CMA for several use cases, such as:",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "Automatic imports from different CMSes like WordPress or Drupal.",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "Integration with other backend systems, such as an e-commerce shop.",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  },
-                  {
-                    "data": {
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "content": [
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": "Building custom editing experiences. We built the ",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                              "uri": "https://app.contentful.com/"
-                            },
-                            "content": [
-                              {
-                                "data": {
-                                },
-                                "marks": [
-                                ],
-                                "value": "Contentful Web app",
-                                "nodeType": "text"
-                              }
-                            ],
-                            "nodeType": "hyperlink"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
-                            ],
-                            "value": " on top of this API.",
-                            "nodeType": "text"
-                          }
-                        ],
-                        "nodeType": "paragraph"
-                      }
-                    ],
-                    "nodeType": "list-item"
-                  }
-                ],
-                "nodeType": "unordered-list"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Preview API",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "heading-3"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "The ",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                      "uri": "https://www.contentful.com/developers/docs/concepts/apis/#content-preview-api"
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "marks": [
-                        ],
-                        "value": "Content Preview API",
-                        "nodeType": "text"
-                      }
-                    ],
-                    "nodeType": "hyperlink"
-                  },
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": ", available at ",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                      {
-                        "type": "code"
-                      }
-                    ],
-                    "value": "preview.contentful.com",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": ", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a \"preview\" deployment of your website (or a \"preview\" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a \"preview\" access token as though it were delivered by the CDA.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Images API",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "heading-3"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "The ",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                      "uri": "https://www.contentful.com/developers/docs/concepts/apis/#images-api"
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "marks": [
-                        ],
-                        "value": "Images API",
-                        "nodeType": "text"
-                      }
-                    ],
-                    "nodeType": "hyperlink"
-                  },
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": ", available at ",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                      {
-                        "type": "code"
-                      }
-                    ],
-                    "value": "images.contentful.com",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": ", allows you to resize and crop images, change their background color and convert them to different formats. Using our API for these transformations lets you upload high-quality assets, deliver exactly what your app needs, and still get all the benefits of our caching CDN.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              }
-            ],
-            "nodeType": "document"
-          }
-        },
-        "author": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "15jwOBqpxqSAOy2eOO4S0m"
-            }
-          }
-        },
-        "publishDate": {
-          "en-US": "2017-05-15T00:00+02:00"
-        },
-        "tags": {
-          "en-US": [
-            "general"
-          ]
-        },
-        "categories": {
-          "en-US": [
-            "Commercial"
-          ]
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "viga8uhafn70"
-          }
-        },
-        "id": "31TNnjHlfaGUoMOwU0M2og",
-        "type": "Entry",
-        "createdAt": "2023-07-12T08:11:27.788Z",
-        "updatedAt": "2023-07-16T05:23:02.478Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 7,
-        "publishedAt": "2023-07-16T05:23:02.478Z",
-        "firstPublishedAt": "2023-07-12T08:11:29.208Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "3YHg0kUlskBzk66xIg6DOP"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "3YHg0kUlskBzk66xIg6DOP"
-          }
-        },
-        "publishedCounter": 4,
-        "version": 8,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "3YHg0kUlskBzk66xIg6DOP"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "blogPost"
-          }
-        }
-      },
-      "fields": {
-        "title": {
-          "en-US": "Automate with webhooks"
-        },
-        "slug": {
-          "en-US": "automate-with-webhooks"
-        },
-        "heroImage": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Asset",
-              "id": "4shwYI3POEGkw0Eg6kcyaQ"
-            }
-          }
-        },
-        "description": {
-          "en-US": {
-            "data": {
-            },
-            "content": [
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Webhooks notify you, another person or system when resources have changed by calling a given HTTP endpoint.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              }
-            ],
-            "nodeType": "document"
-          }
-        },
-        "body": {
-          "en-US": {
-            "data": {
-            },
-            "content": [
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "What are webhooks?",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "heading-2"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "The webhooks are used to notify you when content has been changed. Specify a URL, configure your webhook, and we will send an HTTP POST request whenever something happens to your content.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "How do I configure a webhook?",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "heading-2"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Go to Settings → Webhooks from the navigation bar at the top. From there, hit Add webhook, and you will be directed to your new webhook. Then choose a name, put in the information of your HTTP endpoint (URL and authentication), specify any custom headers and select the types of events that should trigger the webhook.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Why do I get an old version in the CDA?",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "heading-2"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "As the delivery API is powered by a CDN network consisting of hundreds of servers distributed across continents, it takes some time (up to a few minutes) to reflect the changes to the published content. This must be taken into consideration when reacting to webhooks. In normal conditions, there could be a reasonable delay of 2 to 5 minutes.",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": "Extracted from the ",
-                    "nodeType": "text"
-                  },
-                  {
-                    "data": {
-                      "uri": "https://www.contentful.com/faq/webhooks/"
-                    },
-                    "content": [
-                      {
-                        "data": {
-                        },
-                        "marks": [
-                        ],
-                        "value": "Webhooks FAQ",
-                        "nodeType": "text"
-                      }
-                    ],
-                    "nodeType": "hyperlink"
-                  },
-                  {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
-                    "value": ".",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              }
-            ],
-            "nodeType": "document"
-          }
-        },
-        "author": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "15jwOBqpxqSAOy2eOO4S0m"
-            }
-          }
-        },
-        "publishDate": {
-          "en-US": "2017-05-12T00:00+02:00"
-        },
-        "tags": {
-          "en-US": [
-            "javascript"
-          ]
-        },
-        "categories": {
-          "en-US": [
-            "Artwork"
           ]
         }
       }
@@ -2284,6 +1299,907 @@
                 "id": "7orLdboQQowIUs22KAW4U"
               }
             }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "viga8uhafn70"
+          }
+        },
+        "id": "64OgXxvg99H0f6zTkr65vs",
+        "type": "Entry",
+        "createdAt": "2023-07-16T14:40:10.801Z",
+        "updatedAt": "2023-07-16T14:41:07.525Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2023-07-16T14:41:07.525Z",
+        "firstPublishedAt": "2023-07-16T14:41:07.525Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3YHg0kUlskBzk66xIg6DOP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3YHg0kUlskBzk66xIg6DOP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3YHg0kUlskBzk66xIg6DOP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "person"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "BYEONKI"
+        },
+        "title": {
+          "en-US": "BYEONKI"
+        },
+        "company": {
+          "en-US": "Kakao Style"
+        },
+        "shortBio": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Hi, This is BYEONKI",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "email": {
+          "en-US": "byeonki@gmail.com"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "viga8uhafn70"
+          }
+        },
+        "id": "3Almsc6vfB46obeniVWprw",
+        "type": "Entry",
+        "createdAt": "2023-07-16T15:36:19.716Z",
+        "updatedAt": "2023-07-16T15:50:23.789Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2023-07-16T15:50:23.789Z",
+        "firstPublishedAt": "2023-07-16T15:36:27.442Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3YHg0kUlskBzk66xIg6DOP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3YHg0kUlskBzk66xIg6DOP"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3YHg0kUlskBzk66xIg6DOP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "blogPost"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Putons Character 2"
+        },
+        "slug": {
+          "en-US": "putons-character-2"
+        },
+        "heroImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4ixjtUXCVgIgLPw275o24d"
+            }
+          }
+        },
+        "description": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "일본의 패션 테마파크 kisarazu concept store에 등장하는 다섯명의 메인 캐릭",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "터를\n",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "제작했습니다. 각각 독특한 개성을 가진 캐릭터들의 귀여움을 놓치지 마세요.\n재밌게 봐주세요!",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "I have created five characters that appear in the Kisarazu Concept Store in Japan.\nEach character is full of unique personalities, and don't miss their adorable \nmovements! Enjoy the artwork and have fun!",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "body": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "7BXtJvnjfhu1s8pNDEJmS5",
+                      "type": "Link",
+                      "linkType": "Entry"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-entry-block"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "5Ip5u0oE9S1aucI6ONFrtd",
+                      "type": "Link",
+                      "linkType": "Entry"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-entry-block"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "2vTInN7di1iwXQGOpyDAVx",
+                      "type": "Link",
+                      "linkType": "Entry"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-entry-block"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Cliect: 三井不動産株式会社 Mitsui Real Estate Co., Ltd\nProduce: 株式会社スマイルズ smiles\nArt Director：株式会社スマイルズ 金 智姫 smiles Jihee Kim\nCharacter Design：株式会社スマイルズ金 智姫 smiles Jihee Kim\n3D Modelling：BYEONKI\n3D Motion：BYEONKI",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "publishDate": {
+          "en-US": "2017-05-16T00:00+02:00"
+        },
+        "categories": {
+          "en-US": [
+            "Commercial",
+            "Artwork"
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "viga8uhafn70"
+          }
+        },
+        "id": "34t2LJgg2eRiCvOejeF0pr",
+        "type": "Entry",
+        "createdAt": "2023-07-16T15:36:33.147Z",
+        "updatedAt": "2023-07-16T15:50:13.911Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2023-07-16T15:50:13.911Z",
+        "firstPublishedAt": "2023-07-16T15:36:37.951Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3YHg0kUlskBzk66xIg6DOP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3YHg0kUlskBzk66xIg6DOP"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3YHg0kUlskBzk66xIg6DOP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "blogPost"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Putons Character 3"
+        },
+        "slug": {
+          "en-US": "putons-character-3"
+        },
+        "heroImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4ixjtUXCVgIgLPw275o24d"
+            }
+          }
+        },
+        "description": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "일본의 패션 테마파크 kisarazu concept store에 등장하는 다섯명의 메인 캐릭",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "터를\n",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "제작했습니다. 각각 독특한 개성을 가진 캐릭터들의 귀여움을 놓치지 마세요.\n재밌게 봐주세요!",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "I have created five characters that appear in the Kisarazu Concept Store in Japan.\nEach character is full of unique personalities, and don't miss their adorable \nmovements! Enjoy the artwork and have fun!",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "body": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "7BXtJvnjfhu1s8pNDEJmS5",
+                      "type": "Link",
+                      "linkType": "Entry"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-entry-block"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "5Ip5u0oE9S1aucI6ONFrtd",
+                      "type": "Link",
+                      "linkType": "Entry"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-entry-block"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "2vTInN7di1iwXQGOpyDAVx",
+                      "type": "Link",
+                      "linkType": "Entry"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-entry-block"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Cliect: 三井不動産株式会社 Mitsui Real Estate Co., Ltd\nProduce: 株式会社スマイルズ smiles\nArt Director：株式会社スマイルズ 金 智姫 smiles Jihee Kim\nCharacter Design：株式会社スマイルズ金 智姫 smiles Jihee Kim\n3D Modelling：BYEONKI\n3D Motion：BYEONKI",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "publishDate": {
+          "en-US": "2017-05-16T00:00+02:00"
+        },
+        "categories": {
+          "en-US": [
+            "Artwork"
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "viga8uhafn70"
+          }
+        },
+        "id": "14CPPhgkz6tzjX3YTNtdDK",
+        "type": "Entry",
+        "createdAt": "2023-07-16T15:36:44.056Z",
+        "updatedAt": "2023-07-16T15:50:06.669Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2023-07-16T15:50:06.669Z",
+        "firstPublishedAt": "2023-07-16T15:36:48.496Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3YHg0kUlskBzk66xIg6DOP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3YHg0kUlskBzk66xIg6DOP"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3YHg0kUlskBzk66xIg6DOP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "blogPost"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Putons Character 4"
+        },
+        "slug": {
+          "en-US": "putons-character-4"
+        },
+        "heroImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4ixjtUXCVgIgLPw275o24d"
+            }
+          }
+        },
+        "description": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "일본의 패션 테마파크 kisarazu concept store에 등장하는 다섯명의 메인 캐릭",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "터를\n",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "제작했습니다. 각각 독특한 개성을 가진 캐릭터들의 귀여움을 놓치지 마세요.\n재밌게 봐주세요!",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "I have created five characters that appear in the Kisarazu Concept Store in Japan.\nEach character is full of unique personalities, and don't miss their adorable \nmovements! Enjoy the artwork and have fun!",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "body": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "7BXtJvnjfhu1s8pNDEJmS5",
+                      "type": "Link",
+                      "linkType": "Entry"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-entry-block"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "5Ip5u0oE9S1aucI6ONFrtd",
+                      "type": "Link",
+                      "linkType": "Entry"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-entry-block"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "2vTInN7di1iwXQGOpyDAVx",
+                      "type": "Link",
+                      "linkType": "Entry"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-entry-block"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Cliect: 三井不動産株式会社 Mitsui Real Estate Co., Ltd\nProduce: 株式会社スマイルズ smiles\nArt Director：株式会社スマイルズ 金 智姫 smiles Jihee Kim\nCharacter Design：株式会社スマイルズ金 智姫 smiles Jihee Kim\n3D Modelling：BYEONKI\n3D Motion：BYEONKI",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "publishDate": {
+          "en-US": "2017-05-16T00:00+02:00"
+        },
+        "categories": {
+          "en-US": [
+            "Artwork"
           ]
         }
       }

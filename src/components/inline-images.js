@@ -1,5 +1,4 @@
-import React, { useMemo, useState } from 'react'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import React from 'react'
 
 import * as styles from './inline-images.module.css'
 
@@ -9,22 +8,21 @@ const InlineImages = ({ images }) => {
   }
 
   return (
-    <div className={styles.inlineImageContainer}>
+    <div className={styles.inlineImageContainer + " " + styles[`inlineImageContainerWith${images.length}`]}>
       {
-        images.map((image)=>{
-          console.log("iamge", image)
+        images.map((image, index)=>{
+          const {file, description} = image.fields
           return (
-            <div className={styles.inlineImage} key={image.contentful_id}>
-              <GatsbyImage
-                imgStyle={{width:"100%", height:"100%"}}
-                image={getImage(image.gatsbyImage)}
-                alt={image.description}
+            <div className={styles.inlineImage} key={index}>
+              <img
+                width={file.details.image.width}
+                height={file.details.image.height}
+                src={`https:${file.url}`}
+                alt={description}
               />
             </div>
           )
-        }
-
-        )
+        })
       }
     </div>
   )
