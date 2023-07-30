@@ -62,7 +62,7 @@
   flex: 1;
   margin-left: var(--space-2xl);
   margin-top: -31px;
-  height: calc(100vh - 202px);
+  height: calc(100vh - 115px);
 }
 
 @media (max-width: 809px) {
