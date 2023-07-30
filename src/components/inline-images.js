@@ -14,7 +14,7 @@ const InlineImages = ({ images }) => {
         images.map((image, index)=>{
           return (
             <div className={styles.inlineImage} key={index}>
-              <GatsbyImage image={getImage(image?.gatsbyImage)} />
+              <GatsbyImage alt="" image={getImage(image?.gatsbyImage)} />
             </div>
           )
         })

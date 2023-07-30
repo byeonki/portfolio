@@ -1,12 +1,12 @@
 .inlineImageContainer{
     display: flex;
     flex-direction: row;
-    margin: 0 calc(-1 * var(--space-2xl) / 2);
+    margin: 0 -4px;
 }
 
 .inlineImage{
     flex:1;
-    margin: calc(var(--space-2xl) / 2);
+    margin: 4px;
 }
 
 .inlineImageContainerWith1, .inlineImageContainerWith2, .inlineImageContainerWith3, .inlineImageContainerWith4, .inlineImageContainerWith5{

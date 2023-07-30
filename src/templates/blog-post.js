@@ -36,11 +36,11 @@ class BlogPostTemplate extends React.Component {
           description={plainTextDescription}
           image={post.heroImage?.resize.src}
         />
-        <Hero
+        {/* <Hero
           image={post.heroImage?.gatsbyImage}
           title={post.title}
           content={post.description}
-        />
+        /> */}
         <div className={styles.container}>
           <div className={styles.article}>
             <div className={styles.body}>
