@@ -24,7 +24,7 @@
 	min-height: calc(100% - 92px)
 }
 
-.content .wrap p, h1, h2, h3, h4 {
+.content .wrap p, .content .wrap h1, .content .wrap h2, .content .wrap h3, .content .wrap h4, .content .wrap h5, .content .wrap h6 {
 	margin:0;
 	padding:0;
 }

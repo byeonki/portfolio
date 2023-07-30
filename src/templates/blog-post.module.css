@@ -1,5 +1,4 @@
 .meta {
-  font-family: var(--font-serif);
   font-size: var(--text-lg);
   font-style: italic;
   margin: 0 auto 1em;
@@ -10,14 +9,13 @@
 }
 
 .article {
-  font-size: var(--text-xl);
   font-weight: var(--medium);
   letter-spacing: -0.4px;
   margin: 0 var(--space-2xl)
 }
 
 .body {
-  font-family: var(--font-sans);
+  font-size: var(--text-lg);
 }
 
 .article a:hover {
@@ -25,11 +23,11 @@
   color: var(--primary);
 }
 
-.article h1,
+/* .article h1,
 .article h2 {
   font-size: var(--text-2xl);
   margin-top: var(--space-3xl);
-}
+} */
 
 .article h3,
 .article h4,
