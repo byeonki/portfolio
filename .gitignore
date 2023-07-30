@@ -72,3 +72,10 @@ public
 # System files
 .DS_Store
 Thumbs.db
+
+# dependencies
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+.pnp.*
