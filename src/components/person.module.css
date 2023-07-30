@@ -18,9 +18,6 @@
 	flex-direction: column;
 }
 
-.content .wrap:first-child {
-}
-
 .content .wrap:last-child {
 	padding-left: 20px;
 	border-left: 2px solid var(--black);
@@ -36,22 +33,7 @@
 	margin-bottom: 48px;
 }
 
-
-.vLine {
-	display: none;
-	position: fixed;
-	top: 92px;
-	bottom:20px;
-	left:calc(50% - 11px);
-	width:1px;
-	border-left: 2px solid var(--black);
-}
-
 @media (max-width: 809px) {
-	.vLine {
-		display: none;
-	}
-
   .content {
 		position: initial;
     flex-direction: column;

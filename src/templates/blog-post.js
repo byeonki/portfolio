@@ -34,7 +34,7 @@ class BlogPostTemplate extends React.Component {
         <Seo
           title={post.title}
           description={plainTextDescription}
-          image={post.heroImage.resize.src}
+          image={post.heroImage?.resize.src}
         />
         <Hero
           image={post.heroImage?.gatsbyImage}

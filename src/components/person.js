@@ -6,7 +6,6 @@ import InlineImages from '../components/inline-images'
 import { BLOCKS, INLINES } from '@contentful/rich-text-types'
 
 const Person = ({ person }) => {
-	console.log("person", person)
 	if(!person){
 		return null
 	}
@@ -26,7 +25,6 @@ const Person = ({ person }) => {
 				<div className={styles.wrap}>
 					{renderRichText(person.shortBio, options)}
 				</div>
-				<div className={styles.vLine}></div>
 				<div className={styles.wrap}>
 					<div className={styles.box}>
 						{renderRichText(person.client, options)}
