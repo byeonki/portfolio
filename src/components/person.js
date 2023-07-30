@@ -26,6 +26,7 @@ const Person = ({ person }) => {
 				<div className={styles.wrap}>
 					{renderRichText(person.shortBio, options)}
 				</div>
+				<div className={styles.vLine}></div>
 				<div className={styles.wrap}>
 					<div className={styles.box}>
 						{renderRichText(person.client, options)}

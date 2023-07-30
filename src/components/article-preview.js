@@ -57,7 +57,8 @@ const ArticlePreview = ({ posts }) => {
           })}
         </ul>
         <div className={styles.preview}>
-            {previewPost && <Link to={`/blog/${previewPost.slug}`}><GatsbyImage alt="" image={previewPost?.heroImage?.gatsbyImage} /></Link>}
+          <GatsbyImage alt="" image={previewPost?.heroImage?.gatsbyImage} objectFit="contain" objectPosition="top left" style={{width: "100%", height: "100%"}} />
+            {/* {previewPost && <Link to={`/blog/${previewPost.slug}`}><GatsbyImage alt="" image={previewPost?.heroImage?.gatsbyImage} objectFit="contain" /></Link>} */}
         </div>
       </div>
     </Container>
