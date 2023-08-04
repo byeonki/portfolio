@@ -20,27 +20,22 @@ class BlogPostTemplate extends React.Component {
       JSON.parse(post.description.raw)
     )
 
-  const options = {
-    renderNode: {
-      [BLOCKS.EMBEDDED_ENTRY]: (node, children) => {
-        const images = node?.data?.target?.images
-        return images ? <InlineImages images={images} /> : null
+    const options = {
+      renderNode: {
+        [BLOCKS.EMBEDDED_ENTRY]: (node, children) => {
+          const images = node?.data?.target?.images
+          return images ? <InlineImages images={images} /> : null
+        },
       },
-    },
-  }
+    }
 
     return (
       <Layout location={this.props.location}>
         <Seo
           title={post.title}
           description={plainTextDescription}
-          image={post.heroImage?.resize.src}
+          image={post.heroImage?.file?.url}
         />
-        {/* <Hero
-          image={post.heroImage?.gatsbyImage}
-          title={post.title}
-          content={post.description}
-        /> */}
         <div className={styles.container}>
           <div className={styles.article}>
             <div className={styles.body}>
@@ -87,9 +82,9 @@ export const pageQuery = graphql`
       publishDate(formatString: "MMMM Do, YYYY")
       rawDate: publishDate
       heroImage {
-        gatsbyImage(layout: FULL_WIDTH, placeholder: BLURRED, width: 1280)
-        resize(width: 500) {
-          src
+        file {
+          contentType
+          url
         }
       }
       body {
@@ -97,11 +92,10 @@ export const pageQuery = graphql`
         references {
           ... on Node {
             ... on ContentfulAsset {
-              contentful_id
-              title
-              description
-              gatsbyImage(width: 1000)
-              __typename
+              file {
+                contentType
+                url
+              }
             }
             ... on ContentfulBlogPost {
               contentful_id
@@ -113,7 +107,10 @@ export const pageQuery = graphql`
               contentful_id
               title
               images {
-                gatsbyImage(width: 1000)
+                file {
+                  contentType
+                  url
+                }
               }
               __typename
             }

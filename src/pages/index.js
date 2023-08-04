@@ -8,7 +8,6 @@ import ArticlePreview from '../components/article-preview'
 class RootIndex extends React.Component {
   render() {
     const posts = get(this, 'props.data.allContentfulBlogPost.nodes')
-
     return (
       <Layout location={this.props.location}>
         <ArticlePreview posts={posts} />
@@ -28,11 +27,10 @@ export const pageQuery = graphql`
         publishDate(formatString: "MMMM Do, YYYY")
         categories
         heroImage {
-          gatsbyImage(
-            layout: FULL_WIDTH
-            placeholder: BLURRED
-            width: 1000
-          )
+          file {
+            contentType
+            url
+          }
         }
         description {
           raw
